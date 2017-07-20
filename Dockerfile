@@ -1,4 +1,4 @@
-FROM php:7
+FROM php:7.1
 
 RUN buildDeps="libpq-dev libzip-dev " \
     && apt-get update \
