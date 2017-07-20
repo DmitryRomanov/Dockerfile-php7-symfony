@@ -6,6 +6,8 @@ RUN buildDeps="libpq-dev libzip-dev " \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install pdo pdo_pgsql pgsql bcmath
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 VOLUME /usr/src/myapp
 WORKDIR /usr/src/myapp
 
